@@ -68,4 +68,9 @@ describe('Cinema', function () {
     const expected = [bladeRunner, dunkirk, trainspotting];
     assert.deepStrictEqual(actual,expected);
   });
+  it('should be in alphbetical order by title', function () {
+    const actual = cinema.sortFilms();
+    const expected =[blackPanther,bladeRunner,dunkirk,moonlight,trainspotting];
+    assert.deepStrictEqual(actual,expected);
+  });
 });

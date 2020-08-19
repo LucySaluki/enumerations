@@ -42,4 +42,17 @@ Cinema.prototype.runTime = function () {
     return lenOfFilms;
 };
 
+Cinema.prototype.sortFilms = function (){
+    const sortedFilms = this.films.sort((film1,film2) => {
+        if (film1.title < film2.title){
+          return -1;
+        }
+        if (film1.title > film2.title){
+          return 1;
+        }
+        return 0;
+    })
+    return sortedFilms;
+}; 
+
 module.exports = Cinema;
